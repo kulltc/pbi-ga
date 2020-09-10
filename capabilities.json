@@ -1,0 +1,85 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Custom Dimension A",
+            "name": "customDimensionA",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "Custom Dimension B",
+            "name": "customDimensionB",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "Custom Dimension C",
+            "name": "customDimensionC",
+            "kind": "GroupingOrMeasure"
+        }
+    ],
+    "objects": {
+        "googleAnalyticsSettings": {
+            "displayName": "Google Analytics",
+            "properties": {
+                "trackingCode": {
+                    "type": {
+                        "text": true
+                    }
+                },
+                "pageName": {
+                    "type": {
+                        "text": true
+                    }
+                },
+                "tabName": {
+                    "type": {
+                        "text": true
+                    }
+                },
+                "customDimensionIndexA": {
+                    "displayName": "Index A",
+                    "description": "The index of custom dimension A",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "customDimensionIndexB": {
+                    "displayName": "Index B",
+                    "description": "The index of custom dimension B",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "customDimensionIndexC": {
+                    "displayName": "Index C",
+                    "description": "The index of custom dimension C",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
